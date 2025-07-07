@@ -9,6 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/common-kafka" />
+            <option value="$PROJECT_DIR$/service-email" />
+            <option value="$PROJECT_DIR$/service-fraud-detector" />
+            <option value="$PROJECT_DIR$/service-log" />
+            <option value="$PROJECT_DIR$/service-new-order" />
           </set>
         </option>
       </GradleProjectSettings>

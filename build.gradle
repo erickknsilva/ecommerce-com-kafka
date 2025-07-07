@@ -2,26 +2,24 @@ plugins {
     id 'java'
 }
 
-group = 'com.br.erickWck'
-version = '1.0-SNAPSHOT'
+allprojects {
+    group = 'com.br.erickWck'
+    version = '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
+subprojects {
+    apply plugin: 'java'
 
-    // https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
-    implementation("org.apache.kafka:kafka-clients:4.0.0")
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-    implementation("org.slf4j:slf4j-simple:2.0.17")
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    implementation 'com.google.code.gson:gson:2.13.1'
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
 
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
+    test {
+        useJUnitPlatform()
+    }
 }
