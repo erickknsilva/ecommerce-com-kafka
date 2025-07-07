@@ -7,7 +7,6 @@ Este projeto tem como objetivo fortalecer os conceitos fundamentais do **Apache 
 
 A proposta é simular eventos entre módulos da aplicação como se fossem microsserviços independentes, eliminando o acoplamento direto e promovendo:  
 🔗 **Comunicação assíncrona**  
-⚙️ **Escalabilidade e resiliência**  
 🕒 **Liberdade temporal entre as aplicações**
 
 ---
