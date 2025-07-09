@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.br.erickWck'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':common-kafka')
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet
+    implementation 'org.eclipse.jetty:jetty-servlet:11.0.25'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

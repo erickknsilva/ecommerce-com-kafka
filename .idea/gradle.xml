@@ -12,8 +12,10 @@
             <option value="$PROJECT_DIR$/common-kafka" />
             <option value="$PROJECT_DIR$/service-email" />
             <option value="$PROJECT_DIR$/service-fraud-detector" />
+            <option value="$PROJECT_DIR$/service-httpecommerce" />
             <option value="$PROJECT_DIR$/service-log" />
             <option value="$PROJECT_DIR$/service-new-order" />
+            <option value="$PROJECT_DIR$/service-users" />
           </set>
         </option>
       </GradleProjectSettings>

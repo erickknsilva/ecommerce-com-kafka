@@ -33,7 +33,7 @@ public class FraudeDetectorService {
 
 
         Order order = record.value();
-        if (isFraud(order)) {
+        if (!isFraud(order)) {
             System.out.println("Order approved:  " + order);
             orderDispatcher.send("ECOMMERCE_ORDER_APPROVED", order.getEmail(), order);
         } else {
