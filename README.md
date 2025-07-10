@@ -37,8 +37,9 @@ Essas configurações aumentam a segurança, a confiabilidade e a resiliência d
 
 ## 🚀 Tecnologias Utilizadas
 
-- Java 17
+- Java 21
 - Spring Boot
 - Apache Kafka - rodando localmente
+-- Sqlite - banco de dados
 ---
 
