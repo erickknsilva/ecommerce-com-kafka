@@ -21,6 +21,19 @@ Com o **Kafka**:
 - O sistema ganha robustez, flexibilidade e tolerância a falhas.
 
 ---
+## 🔧 Configurações de Resiliência no Cluster Kafka
+
+Para garantir que o ambiente seja resiliente a falhas e que as mensagens não sejam perdidas nem duplicadas, foram aplicadas as seguintes configurações:
+
+| Configuração | Objetivo |
+|---------------|----------|
+| `num.partitions=3` | Cria tópicos com **3 partições** por padrão, permitindo **paralelismo e escalabilidade**. |
+| `offsets.topic.replication.factor=3` | Garante que o **tópico interno de offsets dos consumidores** tenha 3 réplicas, evitando perda de posição de leitura em caso de falha. |
+| `transaction.state.log.replication.factor=3` | Mantém 3 cópias do **log de transações** (usado em transações exactly-once), garantindo disponibilidade e consistência. |
+| `acks=all` | Produtores confirmam o envio **somente após todas as réplicas sincronizadas** confirmarem o recebimento. |
+
+
+Essas configurações aumentam a segurança, a confiabilidade e a resiliência do cluster Kafka, permitindo que o sistema continue funcionando mesmo diante de falhas ou indisponibilidades pontuais.
 
 ## 🚀 Tecnologias Utilizadas
 
