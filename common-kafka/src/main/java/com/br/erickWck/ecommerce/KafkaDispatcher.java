@@ -24,10 +24,9 @@ public class KafkaDispatcher<T> implements Closeable {
     private static Properties properties() {
         var properties = new Properties();
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.1.1:9092");
-        //serializa a chave do tipo string para bytes
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        //serializa o valor do tipo string para bytes
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, GssonSerializer.class.getName());
+        properties.setProperty(ProducerConfig.ACKS_CONFIG, "all");
         return properties;
     }
 
